@@ -1,0 +1,14 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	undo-commit = reset --soft HEAD~1
+	clean-merged = !git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
+	olog = log --oneline
+	oamend = commit --amend --no-edit
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
